@@ -1,6 +1,22 @@
-
+Movie list
 <ul>
   <li ng-repeat="item in reviews | orderBy: 'title'">
-    {{ item.title}}
+    <a  ng-model="selected" ng-click="selectReview(item)">{{ item.title}}</a>
+  </li>
+</ul>
+
+
+<ul>
+  <li ng-repeat="item in reviews | filter:selected=true">
+    <!-- <div ng-show="item.selected"> -->
+
+      <h2>{{ item.title }}</h2>
+      <p>{{ item.reviewText }}</p>
+    <!-- </div> -->
+    <!-- <div ng-hide="item.selected">
+
+      <h2>{{ item.title }}</h2>
+      <p>{{ item.reviewText }}</p>
+    </div> -->
   </li>
 </ul>
