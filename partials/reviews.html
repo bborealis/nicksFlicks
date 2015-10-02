@@ -1,1 +1,6 @@
-reviews
+
+<ul>
+  <li ng-repeat="item in reviews | orderBy: 'title'">
+    {{ item.title}}
+  </li>
+</ul>
