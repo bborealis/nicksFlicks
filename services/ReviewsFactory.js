@@ -1,5 +1,7 @@
 nicksFlicks.factory('ReviewsFactory', function ReviewsFactory() {
   var factory = {};
+
+//this holds all the hard coded reivews\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
   factory.reviews = [{
     title: "Come Drink with Me",
     reviewText: "Come Drink with Me is a 1966 Hong Kong wuxia film directed by King Hu. Set during the Ming Dynasty, it stars Cheng Pei-pei and Yueh Hua as warriors with Chan Hung-lit as the villain, and features action choreography by Han Ying-chieh. It is widely considered one of the best Hong Kong films ever made.",
@@ -31,7 +33,7 @@ nicksFlicks.factory('ReviewsFactory', function ReviewsFactory() {
   }];
 
 
-//adds a new review
+//adds a new review\\\\\\\\\\\\\\\
   factory.addReview = function() {
     var review = {
       title: factory.title,
@@ -43,7 +45,7 @@ nicksFlicks.factory('ReviewsFactory', function ReviewsFactory() {
     factory.reviewText = null;
   };
 
-//sets all reviews to false so that only a selected review will display 
+//sets all reviews to false so that only a selected review will display \\\\\\\\\
   factory.unselectAll = function() {
     for (var i = 0; i < factory.reviews.length; i++) {
       if (factory.reviews[i].selected == true) {

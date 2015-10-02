@@ -16,6 +16,9 @@ _Clone repository.  Start local server, and open index.html._
 _This project makes use of:
 AngularJS, HTML, CSS, Bootstrap._
 
+## What's next??
+
+_Still need to add "night mode" view._
 
 ### Legal
 
