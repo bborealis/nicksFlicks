@@ -1,42 +1,38 @@
 <div class="row">
-  <div class="col-md-3">
+  <div class="col-sm-4">
 
-    <ul>
+    <ul id="noBullet">
       <li ng-repeat="item in reviews | orderBy: 'title'">
-        <a ng-model="selected" ng-click="selectReview(item)">{{ item.title}}</a>
+        <a ng-model="selected" ng-click="ReviewsFactory.unselectAll(); selectReview(item)">{{ item.title}}</a>
       </li>
     </ul>
 
   </div>
-  <div class="col-md-7">
+  <div class="col-sm-8">
 
 
-  <ul>
-    <li ng-repeat="item in reviews | filter:selected=true">
-      <!-- <div ng-show="item.selected"> -->
+    <ul id="noBullet">
+      <li ng-repeat="item in reviews">
+        <dib ng-show="item.selected">
+          <h2>{{ item.title }}</h2>
+          <p>{{ item.reviewText }}</p>
+      </li>
+    </ul>
 
-      <h2>{{ item.title }}</h2>
-      <p>{{ item.reviewText }}</p>
-      <!-- </div> -->
-      <!-- <div ng-hide="item.selected">
-
-        <h2>{{ item.title }}</h2>
-        <p>{{ item.reviewText }}</p>
-      </div> -->
-    </li>
-  </ul>
-
- </div>
+  </div>
 </div>
-<div class="row">
-  <div class="col-md-7 col-md-offset-3">
 
-<h3>Add a new review!</h3>
-  <form ng-submit="ReviewsFactory.addReview()" role="form">
-    <input type="text" class="form-control" ng-model="ReviewsFactory.title" placeholder="Review title" required>
-    <input type="text" class="form-control" ng-model="ReviewsFactory.reviewText" placeholder="Review text" required>
-    <button class="btn btn-default" type="submit">Add Review</button>
-  </form>
+<div class="row">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-8">
+
+
+    <h3>Create New Movie Review</h3>
+    <form ng-submit="ReviewsFactory.addReview()" role="form">
+      <input type="text" class="form-control" ng-model="ReviewsFactory.title" placeholder="Review title" required>
+      <input type="text" class="form-control" ng-model="ReviewsFactory.reviewText" placeholder="Review text" required>
+      <button class="btn btn-default" type="submit">Add Review</button>
+    </form>
 
   </div>
 </div>

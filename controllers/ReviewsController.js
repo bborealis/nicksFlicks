@@ -2,18 +2,9 @@ nicksFlicks.controller('ReviewsCtrl', function ReviewersCtrl($scope, ReviewsFact
   $scope.reviews = ReviewsFactory.reviews;
   $scope.ReviewsFactory = ReviewsFactory;
 
-
-
+//sets the selected review to false
   $scope.selectReview = function(review) {
-    review.selected = !review.selected;
-
-    console.log(review.selected);
+    review.selected = true;
   };
-
-  $scope.unselectReview = function(review) {
-    review.selected = false;
-    console.log(review.selected);
-  };
-
 
 });

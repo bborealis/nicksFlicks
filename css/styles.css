@@ -5,3 +5,18 @@
 .inverted {
   filter: invert(100%);
 }
+
+#center {
+  width:200px;
+  height:50px;
+  margin:auto;
+  position:absolute;
+  top:0;
+  bottom:0;
+  right:0;
+  left:0;
+}
+
+#noBullet li {
+  list-style-type: none;
+}
