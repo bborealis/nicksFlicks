@@ -9,10 +9,12 @@
     <script src="services/UtilitiesFactory.js"></script>
     <script src="controllers/ReviewsController.js"></script>
     <script src="controllers/AdminsController.js"></script>
+    <script src="directives/myDirectives.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
   </head>
   <body>
-    <div class="container">
+    <div class="container" invert>
       <div ui-view="header"></div>
       <div ui-view="body"></div>
     </div>
