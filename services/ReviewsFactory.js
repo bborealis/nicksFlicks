@@ -8,6 +8,11 @@ nicksFlicks.factory('ReviewsFactory', function ReviewsFactory() {
                       { title : "Blood Brothers", reviewText : "Blood Brothers (Traditional: 刺馬; Simplified: 刺马; Pinyin: Cì Mǎ) is a 1973 Shaw Brothers kung fu film directed by Chang Cheh, with action choreography by Lau Kar Leung, and starring David Chiang and Ti Lung. It was released as Chinese Vengeance in the UK and Australia, and Dynasty of Blood in North America. The films is a fictional story based on the assassination of Ma Xinyi.", selected : false },
                       { title : "Five Shaolin Masters", reviewText : "5 Shaolin Masters aka 5 Masters Of Death is a 1974 Shaw Brothers kung fu film directed by Chang Cheh, with action choreography by Lau Kar Leung and Lau Kar Wing. The film focuses on Shaolin's historic rivalries with the Qing Dynasty.", selected : false }];
 
+  factory.addReview = function() {
+    factory.reviews.push({ title : factory.title, reviewText : factory.reviewText, selected : false });
+    factory.title = null;
+    factory.reviewText = null;
+  };
 
   return factory;
 });

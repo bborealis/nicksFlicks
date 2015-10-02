@@ -1,7 +1,7 @@
 Movie list
 <ul>
   <li ng-repeat="item in reviews | orderBy: 'title'">
-    <a  ng-model="selected" ng-click="selectReview(item)">{{ item.title}}</a>
+    <a ng-model="selected" ng-click="selectReview(item)">{{ item.title}}</a>
   </li>
 </ul>
 
@@ -10,8 +10,8 @@ Movie list
   <li ng-repeat="item in reviews | filter:selected=true">
     <!-- <div ng-show="item.selected"> -->
 
-      <h2>{{ item.title }}</h2>
-      <p>{{ item.reviewText }}</p>
+    <h2>{{ item.title }}</h2>
+    <p>{{ item.reviewText }}</p>
     <!-- </div> -->
     <!-- <div ng-hide="item.selected">
 
@@ -20,3 +20,9 @@ Movie list
     </div> -->
   </li>
 </ul>
+
+<form ng-submit="ReviewsFactory.addReview()" role="form">
+  <input type="text" class="form-control" ng-model="ReviewsFactory.title" placeholder="Review title" required>
+  <input type="text" class="form-control" ng-model="ReviewsFactory.reviewText" placeholder="Review text" required>
+  <button class="btn btn-default" type="submit">Add Review</button>
+</form>
